@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Commando
+public  class Commando
 {
     private string Name;
     public string NameKode { get; set; }
