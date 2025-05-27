@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Comando
 {
@@ -11,8 +8,15 @@ namespace Comando
         static void Main(string[] args)
         {
 
-            Commando c = new Commando();
-            c.status = "up";
+            Commando c = new Commando("yoel","yoel-cmd","walk");
+            Weapon weapon = new Weapon("gun", "honda", 32);
+            
+            
+            //c.SayName("colonel");
+
+            Console.WriteLine(c.NameKode);
+
+            //c.Status = "up";
 
         }
     }
