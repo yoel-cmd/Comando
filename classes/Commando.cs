@@ -2,7 +2,7 @@
 
 public class Commando
 {
-    public string Name;
+    private string Name;
     public string NameKode;
     public string[] Tools = { "Hammer", "Chisel", "Rope", "Bag", "Water bottle", };
     public string Status;
@@ -31,4 +31,21 @@ public class Commando
     {
         Console.WriteLine($"The soldier{NameKode} is Attack");
     }
+    //----------------------------------------------------------
+    public void SayName(string commanderRank)
+    {
+        if (commanderRank == "GENERAL".ToLower())
+        {
+            Console.WriteLine(Name);
+        }
+        else if (commanderRank == "COLONEL".ToLower())
+        {
+            Console.WriteLine(NameKode);
+        }
+        else
+        {
+            Console.WriteLine("Classified information");
+        }
+    }
+
 }
