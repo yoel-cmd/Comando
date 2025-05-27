@@ -3,12 +3,12 @@
 public class Commando
 {
     private string Name;
-    public string NameKode;
+    public string NameKode { get; set; }
     public string[] Tools = { "Hammer", "Chisel", "Rope", "Bag", "Water bottle", };
     public string Status;
 
     //----------------------------------------------------------
-    public Commando(string name,string nameKode,string status)
+    public Commando(string name, string nameKode, string status)
     {
         this.Name = name;
         this.NameKode = nameKode;
