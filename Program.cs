@@ -10,6 +10,10 @@ namespace Comando
     {
         static void Main(string[] args)
         {
+
+            Commando c = new Commando();
+            c.status = "up";
+
         }
     }
 }
