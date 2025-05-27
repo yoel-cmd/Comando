@@ -1,13 +1,15 @@
 ﻿public class Commando
 {
-    public string name;
-    public string nameKode;
-    public string[] Tools ;
-    public string status;
+    public string Name;
+    public string NameKode;
+    public string[] Tools = { "Hammer", "Chisel", "Rope", "Bag", "Water bottle", };
+    public string Status;
 
-    public Commando()
+    public Commando(string name,string nameKode,string status)
     {
-
+        this.Name = name;
+        this.NameKode = nameKode;
+        this.Status = status;
     }
 
 }
