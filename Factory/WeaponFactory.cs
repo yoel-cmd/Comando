@@ -29,7 +29,7 @@ public class WeaponFactory
     12,24,8,50,16
     };
     //----------------------------------------------------------
-    public WeaponFactory()
+    public void creatWeapon()
     {
         for (int i = 0; i < 10; i++)
         {

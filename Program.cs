@@ -18,18 +18,27 @@ namespace Comando
             //{
             //    item.Attack();
             //}
-            EnemyFactory enemy = new EnemyFactory();
-            enemy.creatEnemy();
+            //EnemyFactory enemy = new EnemyFactory();
+            //enemy.creatEnemy();
 
 
-            foreach (Enemy item in enemy.enemies)
-            {
-                Console.WriteLine($"Terrorist Name: {item.name}");
-                Console.WriteLine($"Health Level: {item.life}");
-                Console.WriteLine($"Status: {item.status}");
-                Console.WriteLine($"Shout: {item.shout}");
-                Console.WriteLine(); 
-            }
+            //foreach (Enemy item in enemy.enemies)
+            //{
+            //    Console.WriteLine($"Terrorist Name: {item.name}");
+            //    Console.WriteLine($"Health Level: {item.life}");
+            //    Console.WriteLine($"Status: {item.status}");
+            //    Console.WriteLine($"Shout: {item.shout}");
+            //    Console.WriteLine(); 
+            //}
+            EnemyFactory enemyFactory = new EnemyFactory();
+            SoliderFactory soliderFactory = new SoliderFactory();
+            WeaponFactory weaponFactory = new WeaponFactory();
+            enemyFactory.creatEnemy();
+            soliderFactory.createCommando();
+            weaponFactory.creatWeapon();
+           
+
+
 
 
 

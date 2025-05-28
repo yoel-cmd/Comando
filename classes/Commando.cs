@@ -2,7 +2,7 @@
 
 public  class Commando
 {
-    private string Name;
+    public string Name;
     public string NameKode { get; set; }
     public string[] Tools = { "Hammer", "Chisel", "Rope", "Bag", "Water bottle", };
     public string Status;

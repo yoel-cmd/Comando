@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-public class CommandoFactory
+public class SoliderFactory
 {
     public List<Commando> commandos = new List<Commando>();
     //----------------------------------------------------------
@@ -12,6 +12,7 @@ public class CommandoFactory
     "Matthew Hall", "Anthony Allen", "Mark Young", "Steven King", "Andrew Scott",
     "Joshua Green", "Kevin Adams", "Brian Baker", "Jason Wright", "Eric Nelson"
     };
+    //----------------------------------------------------------
     string[] codeNames = new string[]
     {
     "IronWolf", "GhostStrike", "FalconEye", "ShadowBlade", "NightStorm",
@@ -19,8 +20,11 @@ public class CommandoFactory
     "SilverFang", "RogueEagle", "ThunderFist", "ViperGhost", "CobraClaw",
     "DeltaShade", "BlazeRaven", "StormTiger", "AlphaFrost", "RapidSpecter"
     };
+    //----------------------------------------------------------
     string[] statusRandom = { "Standing", "walking", "hiding" };
     Random rnd = new Random();
+    //----------------------------------------------------------
+
     public void createCommando()
     {
         int num = rnd.Next(1, 2);

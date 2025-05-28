@@ -17,11 +17,11 @@ public  class EnemyFactory
     "Jaber", "Mazin", "Sufyan", "Abed", "Issam", "Ilyas", "Abbas", "Safwan", "Ghazi", "Harith",
     "Obaida", "Yazid", "Younes", "Hani", "Samer", "Loai", "Najib", "Zaki", "Mazhar", "Ashraf",
     "Ehab", "Qutaibah", "Abdelrahman", "Rauf", "Shadi", "Tawfiq", "Qais", "Murad", "Tarik", "Rifat"
-};
-
-     Random rnd = new Random();
+    };
+    //----------------------------------------------------------
+    Random rnd = new Random();
     
-    public  void creatEnemy()
+    public void creatEnemy()
     {
         for(int i=0;i<10;i++)
         {
