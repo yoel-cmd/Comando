@@ -45,8 +45,12 @@
   <ItemGroup>
     <Compile Include="classes\AirCommando .cs" />
     <Compile Include="classes\Commando.cs" />
+    <Compile Include="classes\Enemy.cs" />
+    <Compile Include="Factory\EnemyFactory .cs" />
     <Compile Include="classes\SeaCommando .cs" />
+    <Compile Include="Factory\SoliderFactory .cs" />
     <Compile Include="classes\Weapon .cs" />
+    <Compile Include="Factory\WeaponFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
