@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class SoliderFactory
 {
     public List<Commando> commandos = new List<Commando>();
-    //----------------------------------------------------------
+    //-----------------------------------------------------------------------------------------------------------
     string[] soldierNames = new string[]
     {
     "John Miller", "James Anderson", "Robert Jackson", "Michael Davis", "William Harris",
@@ -12,7 +12,7 @@ public class SoliderFactory
     "Matthew Hall", "Anthony Allen", "Mark Young", "Steven King", "Andrew Scott",
     "Joshua Green", "Kevin Adams", "Brian Baker", "Jason Wright", "Eric Nelson"
     };
-    //----------------------------------------------------------
+    //------------------------------------------------------------------------------------------------------------
     string[] codeNames = new string[]
     {
     "IronWolf", "GhostStrike", "FalconEye", "ShadowBlade", "NightStorm",
@@ -20,14 +20,14 @@ public class SoliderFactory
     "SilverFang", "RogueEagle", "ThunderFist", "ViperGhost", "CobraClaw",
     "DeltaShade", "BlazeRaven", "StormTiger", "AlphaFrost", "RapidSpecter"
     };
-    //----------------------------------------------------------
+    //-----------------------------------------------------------------------------------------------------------
     string[] statusRandom = { "Standing", "walking", "hiding" };
     Random rnd = new Random();
-    //----------------------------------------------------------
+    //-----------------------------------------------------------------------------------------------------------
 
     public void createCommando()
     {
-        int num = rnd.Next(1, 2);
+        int num = rnd.Next(1, 3);
         for (int i = 0; i < 10; i++)
         {
             string name = soldierNames[rnd.Next(0, soldierNames.Length)];
@@ -42,5 +42,15 @@ public class SoliderFactory
                 commandos.Add(new SeaCommando(name, nameKode, status));
             }
         }
+    }
+    //---------------------------------------------------------------------------------------------------------
+    public void addAirCommando(string name, string nameKode, string status)
+    {
+        commandos.Add(new AirCommando(name, nameKode, status));
+    }
+    //---------------------------------------------------------------------------------------------------------
+    public void addAirSeaCommando(string name, string nameKode, string status)
+    {
+        commandos.Add(new SeaCommando(name, nameKode, status));
     }
 }

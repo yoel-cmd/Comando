@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public  class EnemyFactory
 {
     public List<Enemy> enemies = new List<Enemy>();
-    //----------------------------------------------------------
+    //------------------------------------------------------------------------------------------------------------
     static string[] arabNames = new string[]
 {
     "Ahmad", "Mohammed", "Ali", "Omar", "Yusuf", "Hassan", "Hussein", "Ibrahim", "Abdullah", "Khaled",
@@ -18,7 +18,7 @@ public  class EnemyFactory
     "Obaida", "Yazid", "Younes", "Hani", "Samer", "Loai", "Najib", "Zaki", "Mazhar", "Ashraf",
     "Ehab", "Qutaibah", "Abdelrahman", "Rauf", "Shadi", "Tawfiq", "Qais", "Murad", "Tarik", "Rifat"
     };
-    //----------------------------------------------------------
+    //------------------------------------------------------------------------------------------------------------
     Random rnd = new Random();
     
     public void creatEnemy()
@@ -28,7 +28,11 @@ public  class EnemyFactory
            enemies.Add(new Enemy(arabNames[rnd.Next(1, arabNames.Length)]));
         }
     }
+    //------------------------------------------------------------------------------------------------------------
+    public void addEnemy(string name)
+    {
+        enemies.Add(new Enemy(name));
+    }
     
-
 
 }

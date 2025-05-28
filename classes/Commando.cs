@@ -1,51 +1,67 @@
 ﻿using System;
 
-public  class Commando
+public class Commando
 {
-    public string Name;
-    public string NameKode { get; set; }
-    public string[] Tools = { "Hammer", "Chisel", "Rope", "Bag", "Water bottle", };
-    public string Status;
+    public string name;
+    public string nameKode { get; set; }
+    public string[] tools = { "Hammer", "Chisel", "Rope", "Bag", "Water bottle", };
+    public string status;
 
     //----------------------------------------------------------
     public Commando(string name, string nameKode, string status)
     {
-        this.Name = name;
-        this.NameKode = nameKode;
-        this.Status = status;
+        this.name = name;
+        this.nameKode = nameKode;
+        this.status = status;
     }
     //----------------------------------------------------------
     public void Walk()
     {
-        Status = "Walk";
+        status = "Walk";
         Console.WriteLine("The soldier is leaving.");
     }
     //----------------------------------------------------------
     public void Hide()
     {
-        Status = "Hide";
+        status = "Hide";
         Console.WriteLine("The soldier is Hide.");
     }
     //----------------------------------------------------------
-    public  virtual void Attack()
+    public virtual void Attack()
     {
-        Console.WriteLine($"The soldier {NameKode} is Attack");
+        Console.WriteLine($"The soldier {nameKode} is Attack");
     }
     //----------------------------------------------------------
-    public void SayName(string commanderRank)
+    public void Sayname(string commanderRank)
     {
         if (commanderRank == "GENERAL".ToLower())
         {
-            Console.WriteLine(Name);
+            Console.WriteLine(name);
         }
         else if (commanderRank == "COLONEL".ToLower())
         {
-            Console.WriteLine(NameKode);
+            Console.WriteLine(nameKode);
         }
         else
         {
             Console.WriteLine("Classified information");
         }
+    }
+    //----------------------------------------------------------
+    public void printInfo()
+    {
+        Console.WriteLine("----- Commando Info -----");
+        Console.WriteLine($"Name       : {name}");
+        Console.WriteLine($"Code Name  : {nameKode}");
+        Console.WriteLine($"Status     : {status}");
+        Console.WriteLine("Tools      :");
+
+        foreach (string tool in tools)
+        {
+            Console.WriteLine($"  - {tool}");
+        }
+
+        Console.WriteLine("--------------------------");
     }
 
 }

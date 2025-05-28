@@ -18,4 +18,14 @@ public class Weapon
         Console.WriteLine("shoot");
         ammoCount -= 1;
     }
+    //----------------------------------------------------------
+    public void printInfo()
+    {
+        Console.WriteLine("----- Weapon Info -----");
+        Console.WriteLine($"Name         : {nameWepon}");
+        Console.WriteLine($"Manufacturer : {manufacturer}");
+        Console.WriteLine($"Ammo Count   : {ammoCount}");
+        Console.WriteLine("------------------------");
+    }
+
 }
