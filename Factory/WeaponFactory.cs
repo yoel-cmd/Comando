@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class WeaponFactory
 {
     public List<Weapon> weapons = new List<Weapon>();
-    //----------------------------------------------------------
+    //-----------------------------------------------------------------------------------------------------------
     Random rnd = new Random();
     string[] weaponNames = new string[]
     {
@@ -14,7 +14,7 @@ public class WeaponFactory
     "Shadow Blaster",
     "Thunder Spike"
     };
-    //----------------------------------------------------------
+    //-----------------------------------------------------------------------------------------------------------
     string[] weaponManufacturers = new string[]
     {
     "BlackForge Arms",
@@ -23,12 +23,12 @@ public class WeaponFactory
     "NovaCore Systems",
     "Titan Armaments"
     };
-    //----------------------------------------------------------
+    //------------------------------------------------------------------------------------------------------------
     int[] weaponAmmoCounts = new int[]
     {
     12,24,8,50,16
     };
-    //----------------------------------------------------------
+    //------------------------------------------------------------------------------------------------------------
     public void creatWeapon()
     {
         for (int i = 0; i < 10; i++)
@@ -40,8 +40,11 @@ public class WeaponFactory
             weapons.Add(new Weapon(name, manufacturer, ammoCount));
         }
     }
-    //----------------------------------------------------------
-
+    //---------------------------------------------------------------------------------------------------------
+    public void addWeapon(string name, string manufacturer, int ammoCount)
+    {
+        weapons.Add(new Weapon(name, manufacturer, ammoCount));
+    }
 
 
 }

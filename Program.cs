@@ -30,13 +30,21 @@ namespace Comando
             //    Console.WriteLine($"Shout: {item.shout}");
             //    Console.WriteLine(); 
             //}
-            EnemyFactory enemyFactory = new EnemyFactory();
-            SoliderFactory soliderFactory = new SoliderFactory();
-            WeaponFactory weaponFactory = new WeaponFactory();
-            enemyFactory.creatEnemy();
-            soliderFactory.createCommando();
-            weaponFactory.creatWeapon();
-           
+            //EnemyFactory enemyFactory = new EnemyFactory();
+            //SoliderFactory soliderFactory = new SoliderFactory();
+            //WeaponFactory weaponFactory = new WeaponFactory();
+            //enemyFactory.creatEnemy();
+            //soliderFactory.createCommando();
+            //weaponFactory.creatWeapon();
+
+            //foreach (var item in enemyFactory.enemies)
+            //{
+            //    item.printInfo();
+            //}
+
+            Game game = new Game();
+            game.weaponFactory.creatWeapon();
+
 
 
 
