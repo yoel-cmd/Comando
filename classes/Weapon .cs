@@ -27,5 +27,5 @@ public class Weapon
         Console.WriteLine($"Ammo Count   : {ammoCount}");
         Console.WriteLine("------------------------");
     }
-
+    
 }
